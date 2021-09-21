@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationgraph"
+    app:startDestination="@id/listOfPersonsFragment">
+
+    <fragment
+        android:id="@+id/listOfPersonsFragment"
+        android:name="com.example.rickandmortyapp.ui.ListOfPersonsFragment"
+        android:label="Persons List"
+        tools:layout="@layout/fragment_list_of_persons" >
+        <action
+            android:id="@+id/action_listOfPersonsFragment_to_articlePersonFragment"
+            app:destination="@id/articlePersonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedPersonsFragment"
+        android:name="com.example.rickandmortyapp.ui.SavedPersonsFragment"
+        android:label="Saved Persons"
+        tools:layout="@layout/fragment_saved_persons" >
+        <action
+            android:id="@+id/action_savedPersonsFragment_to_articlePersonWithoutSaveButtonFragment"
+            app:destination="@id/articlePersonWithoutSaveButtonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchPersonsFragment"
+        android:name="com.example.rickandmortyapp.ui.SearchPersonsFragment"
+        android:label="Search Persons"
+        tools:layout="@layout/fragment_search_persons" >
+        <action
+            android:id="@+id/action_searchPersonsFragment_to_articlePersonFragment"
+            app:destination="@id/articlePersonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlePersonFragment"
+        android:name="com.example.rickandmortyapp.ui.ArticlePersonFragment"
+        android:label="Detailed Description"
+        tools:layout="@layout/fragment_article_person" >
+        <argument
+            android:name="result"
+            app:argType="com.example.rickandmortyapp.db.Result" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlePersonWithoutSaveButtonFragment"
+        android:name="com.example.rickandmortyapp.ui.ArticlePersonWithoutSaveButtonFragment"
+        android:label="Detailed Description"
+        tools:layout="@layout/fragment_article_person_without_save_button" >
+        <argument
+            android:name="resultWithoutSaveButton"
+            app:argType="com.example.rickandmortyapp.db.Result" />
+    </fragment>
+</navigation>

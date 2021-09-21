@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/listOfPersonsFragment"
+        android:title="All Persons"
+        android:icon="@drawable/ic_listofpersons"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/savedPersonsFragment"
+        android:title="Saved Persons"
+        android:icon="@drawable/ic_savedpersons"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/searchPersonsFragment"
+        android:title="Search Persons"
+        android:icon="@drawable/ic_searchpersons"
+        app:showAsAction="always"/>
+
+</menu>
